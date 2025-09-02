@@ -13,14 +13,6 @@ async function seedMovies() {
     const name = faker.book.title();
     const releaseDate = faker.date.anytime();
     const runningTime = faker.number.int({ min: 10, max: 600 });
-
-    // const obj = {
-    //   name: faker.book.title(),
-    //   release_date: faker.date.anytime(),
-    //   running_time: faker.number.int(),
-    // };
-
-    const movie = await createMovie({ name, releaseDate, runningTime });
-    // return movie;
+    const movie = await createMovie(name, releaseDate, runningTime);
   }
 }
